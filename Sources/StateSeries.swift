@@ -137,3 +137,8 @@ public extension StateSeries {
         }
     }
 }
+extension StateSeries: ExpressibleByArrayLiteral {
+    public init(arrayLiteral elements: Snapshot...) {
+        append(contentsOf: elements)
+    }
+}
