@@ -13,7 +13,7 @@
 /// State-series is built with multiple state-points.
 /// Each point has unique ID, and provide equality test and order comparison.
 ///
-public struct StateSeries<Snapshot>: CustomDebugStringConvertible {
+public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertible {
     public typealias Point = (id: PointID, state: Snapshot)
     private var ssimpl = SSImpl<Snapshot>()
 
@@ -43,8 +43,15 @@ public struct StateSeries<Snapshot>: CustomDebugStringConvertible {
     public mutating func removeFirst(_ n: Int) {
         ssimpl.removeFirstPoints(n)
     }
-    /// Defined for test.
-    internal mutating func compact() {
+
+    internal var baseIndex: Int {
+        return ssimpl.baseIndex
+    }
+
+    ///
+    /// Always O(n)
+    ///
+    public mutating func compact() {
         cloneImplIfNeeded()
         ssimpl.compactKeySpace()
     }

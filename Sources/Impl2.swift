@@ -34,7 +34,7 @@ final class SSImpl<T>: CustomDebugStringConvertible {
     typealias Point = PImpl<T>
     private(set) var points = [Point]()                     //< See class documentation.
     private let sharing = SSImplPImplMutableSharingBox()    //< See class documentation.
-    private var baseIndex: Int {
+    private(set) var baseIndex: Int {
         get { return sharing.baseIndex }
         set { sharing.baseIndex = newValue }
     }
@@ -59,17 +59,8 @@ final class SSImpl<T>: CustomDebugStringConvertible {
     func removeFirstPoints(_ n: Int) {
         baseIndex += n
         points.removeFirst(n)
-        compactKeySpaceIfNeeded()
     }
-    private func compactKeySpaceIfNeeded() {
-        if (points.count / 2) < baseIndex {
-            compactKeySpace()
-        }
-    }
-    ///
-    /// Exposed for test.
-    ///
-    internal func compactKeySpace() {
+    func compactKeySpace() {
         baseIndex = 0
         for i in 0..<points.count {
             let p = points[i]

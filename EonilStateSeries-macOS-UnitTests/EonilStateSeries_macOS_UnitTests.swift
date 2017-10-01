@@ -62,8 +62,30 @@ class EonilStateSeries_macOS_UnitTests: XCTestCase {
         s1.append(contentsOf: [111, 222, 333])
         let id3 = s1.points[2].id
         s1.removeFirst(2)
+        s1.compact()
         XCTAssertEqual(s1.points.count, 1)
         XCTAssertEqual(s1.points[0].id, id3)
         XCTAssertEqual(s1.points[0].state, 333)
+    }
+    func testCompactAndAppend() {
+        typealias SS = StateSeries<Int>
+        var s1 = SS()
+        s1.append(contentsOf: [111, 222, 333])
+        let id3 = s1.points[2].id
+        s1.removeFirst(2)
+        XCTAssertEqual(s1.baseIndex, 2)
+        s1.compact()
+        XCTAssertEqual(s1.baseIndex, 0)
+        XCTAssertEqual(s1.points.count, 1)
+        XCTAssertEqual(s1.points[0].id, id3)
+        XCTAssertEqual(s1.points[0].state, 333)
+        s1.append(444)
+        s1.append(555)
+        XCTAssertEqual(s1.baseIndex, 0)
+        XCTAssertEqual(s1.points.count, 3)
+        XCTAssertLessThan(s1.points[0].id, s1.points[1].id)
+        XCTAssertLessThan(s1.points[0].id, s1.points[2].id)
+        XCTAssertLessThan(s1.points[1].id, s1.points[2].id)
+        XCTAssertEqual(Array(s1.points.sorted(by: { a, b in a < b }).map({ $0.state })), [333, 444, 555])
     }
 }

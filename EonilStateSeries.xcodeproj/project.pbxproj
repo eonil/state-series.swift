@@ -14,6 +14,10 @@
 		45188C221F813E4100506284 /* libEonilStateSeries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 455267A21F8128BF001D4006 /* libEonilStateSeries.a */; };
 		45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
 		45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
+		45188C2E1F81588100506284 /* AutocompactngStateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */; };
+		45188C2F1F81588100506284 /* AutocompactngStateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */; };
+		45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
+		45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
 		455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,8 @@
 		45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIdentifier.extension.swift; sourceTree = "<group>"; };
 		45188C2B1F814F4C00506284 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45188C2C1F814F5500506284 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompactngStateSeries.swift; sourceTree = "<group>"; };
+		45188C301F8158AB00506284 /* StateSeriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeriesType.swift; sourceTree = "<group>"; };
 		455267A21F8128BF001D4006 /* libEonilStateSeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilStateSeries.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		455267AE1F8128E1001D4006 /* StateSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +117,9 @@
 		455267AC1F8128D0001D4006 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				45188C301F8158AB00506284 /* StateSeriesType.swift */,
 				455267AE1F8128E1001D4006 /* StateSeries.swift */,
+				45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */,
 				45188C071F81334700506284 /* Impl2.swift */,
 				45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */,
 			);
@@ -243,6 +251,8 @@
 			files = (
 				45188C161F813A7100506284 /* StateSeries.swift in Sources */,
 				45188C181F813A7100506284 /* Impl2.swift in Sources */,
+				45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */,
+				45188C2F1F81588100506284 /* AutocompactngStateSeries.swift in Sources */,
 				45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +271,8 @@
 			files = (
 				455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */,
 				45188C081F81334700506284 /* Impl2.swift in Sources */,
+				45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */,
+				45188C2E1F81588100506284 /* AutocompactngStateSeries.swift in Sources */,
 				45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
