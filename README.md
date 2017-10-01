@@ -10,4 +10,8 @@ automatically up to certain scale.
 
 
 
+License
+-------
+Licensed under "MIT License".
+Contributions will become same license.
 
