@@ -17,6 +17,8 @@ public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertib
     public typealias Point = (id: PointID, state: Snapshot)
     private var ssimpl = SSImpl<Snapshot>()
 
+    public init() {
+    }
     ///
     /// Provides a tool to perform content equality test quicky (O(1)).
     ///
