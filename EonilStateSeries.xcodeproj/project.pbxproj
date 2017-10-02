@@ -7,22 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45188C081F81334700506284 /* Impl2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C071F81334700506284 /* Impl2.swift */; };
 		45188C161F813A7100506284 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
-		45188C181F813A7100506284 /* Impl2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C071F81334700506284 /* Impl2.swift */; };
 		45188C201F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C1F1F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift */; };
 		45188C221F813E4100506284 /* libEonilStateSeries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 455267A21F8128BF001D4006 /* libEonilStateSeries.a */; };
 		45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
 		45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
-		45188C2E1F81588100506284 /* AutocompactngStateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */; };
-		45188C2F1F81588100506284 /* AutocompactngStateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */; };
 		45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
 		45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
-		45188C681F81FD0600506284 /* SequantialKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C671F81FD0600506284 /* SequantialKey.swift */; };
 		45188C6A1F82085100506284 /* assertMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C691F82085100506284 /* assertMainThread.swift */; };
-		45188C6B1F82085500506284 /* SequantialKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C671F81FD0600506284 /* SequantialKey.swift */; };
 		45188C6C1F82085500506284 /* assertMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C691F82085100506284 /* assertMainThread.swift */; };
 		45188C6E1F820FE800506284 /* StateSeriesWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */; };
+		45188C721F8227E600506284 /* TimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C711F8227E600506284 /* TimePoint.swift */; };
 		455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +44,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		45188C071F81334700506284 /* Impl2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impl2.swift; sourceTree = "<group>"; };
 		45188C0D1F813A5600506284 /* libEonilStateSeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilStateSeries.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		45188C1D1F813E4100506284 /* EonilStateSeries-macOS-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EonilStateSeries-macOS-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45188C1F1F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EonilStateSeries_macOS_UnitTests.swift; sourceTree = "<group>"; };
@@ -57,11 +51,10 @@
 		45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIdentifier.extension.swift; sourceTree = "<group>"; };
 		45188C2B1F814F4C00506284 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45188C2C1F814F5500506284 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompactngStateSeries.swift; sourceTree = "<group>"; };
 		45188C301F8158AB00506284 /* StateSeriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeriesType.swift; sourceTree = "<group>"; };
-		45188C671F81FD0600506284 /* SequantialKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequantialKey.swift; sourceTree = "<group>"; };
 		45188C691F82085100506284 /* assertMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assertMainThread.swift; sourceTree = "<group>"; };
 		45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeriesWatchdog.swift; sourceTree = "<group>"; };
+		45188C711F8227E600506284 /* TimePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePoint.swift; sourceTree = "<group>"; };
 		455267A21F8128BF001D4006 /* libEonilStateSeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilStateSeries.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		455267AE1F8128E1001D4006 /* StateSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,10 +121,8 @@
 				45188C301F8158AB00506284 /* StateSeriesType.swift */,
 				455267AE1F8128E1001D4006 /* StateSeries.swift */,
 				45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */,
-				45188C2D1F81588100506284 /* AutocompactngStateSeries.swift */,
-				45188C071F81334700506284 /* Impl2.swift */,
 				45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */,
-				45188C671F81FD0600506284 /* SequantialKey.swift */,
+				45188C711F8227E600506284 /* TimePoint.swift */,
 				45188C691F82085100506284 /* assertMainThread.swift */,
 			);
 			path = Sources;
@@ -260,12 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45188C6B1F82085500506284 /* SequantialKey.swift in Sources */,
 				45188C161F813A7100506284 /* StateSeries.swift in Sources */,
 				45188C6C1F82085500506284 /* assertMainThread.swift in Sources */,
-				45188C181F813A7100506284 /* Impl2.swift in Sources */,
 				45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */,
-				45188C2F1F81588100506284 /* AutocompactngStateSeries.swift in Sources */,
 				45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,13 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45188C721F8227E600506284 /* TimePoint.swift in Sources */,
 				455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */,
 				45188C6E1F820FE800506284 /* StateSeriesWatchdog.swift in Sources */,
-				45188C081F81334700506284 /* Impl2.swift in Sources */,
 				45188C6A1F82085100506284 /* assertMainThread.swift in Sources */,
 				45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */,
-				45188C2E1F81588100506284 /* AutocompactngStateSeries.swift in Sources */,
-				45188C681F81FD0600506284 /* SequantialKey.swift in Sources */,
 				45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

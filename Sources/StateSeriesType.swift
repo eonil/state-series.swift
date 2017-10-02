@@ -30,9 +30,4 @@ public extension StateSeriesType {
         removeFirst(1)
     }
 }
-//struct StateSeriesStatistics {
-//    var unavailableKeyCount: Int
-//    var usingKeyCount: Int
-//    var availableKeyCount: Int
-//}
 

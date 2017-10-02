@@ -16,7 +16,8 @@
 ///
 /// Equalty of Point ID
 /// -------------------
-/// Point ID represents relative distance and order between two points.
+/// Point ID represents relative distance and order between two points in
+/// a series. Point IDs between two different serieses are awalys inequal.
 /// Also point ID is pure value semantic. If you copy a state-series, and
 /// append one new state, their point IDs are equal because they have
 /// same relative distance from previous point.
@@ -25,9 +26,8 @@
 /// unnecessary old point IDs as soon as possible to save memory.
 ///
 public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertible {
-    fileprivate typealias RawPoint = (id: SequentialKey, state: Snapshot)
+    fileprivate typealias RawPoint = (id: TimePoint, state: Snapshot)
     private var rawPoints = [RawPoint]()
-    private var rawPointIDSeed: SequentialKey
 
     public static var defaultMaxUnavailableKeySpaceCount: Int { return 1024 * 1024 }
     public typealias Point = (id: PointID, state: Snapshot)
@@ -37,20 +37,13 @@ public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertib
     ///     Hard limit of total number of points.
     ///
     public init(capacity: Int = .max) {
-        let ps = SequentialKeyParameters(
-            maxInstanceCount: capacity,
-            maxUnavailableOrderNumberCount: StateSeries.defaultMaxUnavailableKeySpaceCount)
-        rawPointIDSeed = SequentialKey.first(ps)
     }
     public var points: PointCollection {
         return PointCollection(rawPoints)
     }
     public mutating func append(_ state: Snapshot) {
-        precondition(points.count < rawPointIDSeed.parameters.maxInstanceCount, "Exceeds hard capacity limit.")
-        if rawPointIDSeed.length > rawPoints.count + 128 { StateSeriesWatchDog.cast(.tooManyDeadPointIDInstancesAreAlive) }
-        let p = (rawPointIDSeed, state)
+        let p = (TimeLine.spawn(), state)
         rawPoints.append(p)
-        rawPointIDSeed = rawPointIDSeed.continuation()
     }
     public mutating func append<S>(contentsOf states: S) where S: Sequence, S.Element == Snapshot {
         states.forEach({ append($0) })
@@ -68,19 +61,18 @@ public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertib
 }
 public extension StateSeries {
     public struct PointID: Comparable, CustomDebugStringConvertible {
-        let rawKey: SequentialKey
-        fileprivate init(_ raw: SequentialKey) {
-            rawKey = raw
+        let timePoint: TimePoint
+        fileprivate init(_ p: TimePoint) {
+            timePoint = p
         }
         public static func == (_ a: PointID, _ b: PointID) -> Bool {
-            return a.rawKey == b.rawKey
+            return a.timePoint == b.timePoint
         }
         public static func < (_ a: PointID, _ b: PointID) -> Bool {
-            return a.rawKey < b.rawKey
+            return a.timePoint < b.timePoint
         }
         public var debugDescription: String {
-            let a = ObjectIdentifier(rawKey).makeAddress()
-            return "PointID(identity: \(a), order: \(rawKey.order))"
+            return "PointID(\(timePoint)"
         }
     }
     public struct PointCollection: RandomAccessCollection {

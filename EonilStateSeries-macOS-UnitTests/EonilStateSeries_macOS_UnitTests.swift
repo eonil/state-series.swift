@@ -56,62 +56,26 @@ class EonilStateSeries_macOS_UnitTests: XCTestCase {
         XCTAssertEqual(s2.points[1].state, 222)
         XCTAssertFalse(s1.points.last!.id == s2.points.last!.id)
     }
-    func testRawKeyOrderValues() {
-        typealias SS = StateSeries<Int>
-        var s1 = SS()
-        for i in 0..<(SS.defaultMaxUnavailableKeySpaceCount + 2) {
-            s1.append(i * 100)
-            let pid = s1.points.last!.id
-            XCTAssertEqual(UInt64(pid.rawKey.order), UInt64(i + 1))
+    func testTimeLineSegmentation() {
+        let t = TimeLine(maxSegmentCount: 2, maxPointCountInSegment: 4)
+        var ps = [TimePoint]()
+        for _ in 0..<8 {
+            ps.append(t.append())
         }
+        XCTAssert(t.segments.count == 2)
+        XCTAssert(t.segments[0].pointCount == 4)
+        XCTAssert(t.segments[1].pointCount == 4)
+        XCTAssertEqual(ps.sorted(), ps)
+        XCTAssertEqual([ps[3], ps[2], ps[0], ps[5]].sorted(), [ps[0], ps[2], ps[3], ps[5]])
     }
-    func testRawKeyCompaction() {
-        typealias SS = StateSeries<Int>
-        var s1 = SS()
-        for i in 0..<(SS.defaultMaxUnavailableKeySpaceCount + 2) {
-            s1.append(i * 100)
-            if s1.points.count > 16 {
-                s1.removeFirst()
-            }
-            let pid = s1.points.last!.id
-            if pid.rawKey.length < SS.defaultMaxUnavailableKeySpaceCount {
-                XCTAssertEqual(UInt64(pid.rawKey.order), UInt64(i + 1))
-            }
-            else {
-                XCTAssertEqual(UInt64(pid.rawKey.order), UInt64(i + 1 - SS.defaultMaxUnavailableKeySpaceCount))
-            }
+    func testTimeLineCompaction() {
+        let t = TimeLine(maxSegmentCount: 2, maxPointCountInSegment: 4)
+        var ps = [TimePoint]()
+        for _ in 0..<8 {
+            ps.append(t.append())
         }
+        ps.removeAll()
+        XCTAssert(t.segments.count == 1)
+        XCTAssert(t.segments[0].pointCount == 0)
     }
-//    func testCompact() {
-//        typealias SS = StateSeries<Int>
-//        var s1 = SS()
-//        s1.append(contentsOf: [111, 222, 333])
-//        let id3 = s1.points[2].id
-//        s1.removeFirst(2)
-//        s1.compact()
-//        XCTAssertEqual(s1.points.count, 1)
-//        XCTAssertEqual(s1.points[0].id, id3)
-//        XCTAssertEqual(s1.points[0].state, 333)
-//    }
-//    func testCompactAndAppend() {
-//        typealias SS = StateSeries<Int>
-//        var s1 = SS()
-//        s1.append(contentsOf: [111, 222, 333])
-//        let id3 = s1.points[2].id
-//        s1.removeFirst(2)
-//        XCTAssertEqual(s1.baseIndex, 2)
-//        s1.compact()
-//        XCTAssertEqual(s1.baseIndex, 0)
-//        XCTAssertEqual(s1.points.count, 1)
-//        XCTAssertEqual(s1.points[0].id, id3)
-//        XCTAssertEqual(s1.points[0].state, 333)
-//        s1.append(444)
-//        s1.append(555)
-//        XCTAssertEqual(s1.baseIndex, 0)
-//        XCTAssertEqual(s1.points.count, 3)
-//        XCTAssertLessThan(s1.points[0].id, s1.points[1].id)
-//        XCTAssertLessThan(s1.points[0].id, s1.points[2].id)
-//        XCTAssertLessThan(s1.points[1].id, s1.points[2].id)
-//        XCTAssertEqual(Array(s1.points.sorted(by: { a, b in a < b }).map({ $0.state })), [333, 444, 555])
-//    }
 }
