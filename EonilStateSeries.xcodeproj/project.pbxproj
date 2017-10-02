@@ -19,6 +19,8 @@
 		45188C6E1F820FE800506284 /* StateSeriesWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */; };
 		45188C721F8227E600506284 /* TimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C711F8227E600506284 /* TimePoint.swift */; };
 		455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
+		45B5E6A41F8248150021C3C0 /* StateSeriesWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */; };
+		45B5E6A51F8248150021C3C0 /* TimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C711F8227E600506284 /* TimePoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,7 +256,9 @@
 				45188C161F813A7100506284 /* StateSeries.swift in Sources */,
 				45188C6C1F82085500506284 /* assertMainThread.swift in Sources */,
 				45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */,
+				45B5E6A41F8248150021C3C0 /* StateSeriesWatchdog.swift in Sources */,
 				45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */,
+				45B5E6A51F8248150021C3C0 /* TimePoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
