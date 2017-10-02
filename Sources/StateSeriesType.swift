@@ -6,22 +6,17 @@
 //
 //
 
+///
+/// Version is not required. Because ID of last point
+/// is the version.
+///
 public protocol StateSeriesType {
-    associatedtype Version: Equatable
     associatedtype PointID: Comparable
     associatedtype Snapshot
     associatedtype PointCollection: RandomAccessCollection
 
     typealias Point = (id: PointID, state: Snapshot)
 
-    ///
-    /// Provides a tool to perform content equality test quicky (O(1)).
-    ///
-    /// If two different versions are equal, content of two series are
-    /// guaranteed to be equal. Inequality cannot be tested due to
-    /// implementation details.
-    ///
-    var version: Version { get }
     var points: PointCollection { get }
 
     mutating func append(_ state: Snapshot)
