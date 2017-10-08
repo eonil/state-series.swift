@@ -10,12 +10,12 @@
 /// Version is not required. Because ID of last point
 /// is the version.
 ///
-public protocol StateSeriesType {
-    associatedtype PointID: Comparable
-    associatedtype Snapshot
+public protocol StateSeriesType where PointCollection.Element == Point {
     associatedtype PointCollection: RandomAccessCollection
-
-    typealias Point = (id: PointID, state: Snapshot)
+    associatedtype PointID: Comparable
+    associatedtype PointState
+    typealias Snapshot = PointState
+    typealias Point = (id: PointID, state: PointState)
 
     var points: PointCollection { get }
 

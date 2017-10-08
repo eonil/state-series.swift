@@ -56,26 +56,4 @@ class EonilStateSeries_macOS_UnitTests: XCTestCase {
         XCTAssertEqual(s2.points[1].state, 222)
         XCTAssertFalse(s1.points.last!.id == s2.points.last!.id)
     }
-    func testTimeLineSegmentation() {
-        let t = TimeLine(maxSegmentCount: 2, maxPointCountInSegment: 4)
-        var ps = [TimePoint]()
-        for _ in 0..<8 {
-            ps.append(t.append())
-        }
-        XCTAssert(t.segments.count == 2)
-        XCTAssert(t.segments[0].pointCount == 4)
-        XCTAssert(t.segments[1].pointCount == 4)
-        XCTAssertEqual(ps.sorted(), ps)
-        XCTAssertEqual([ps[3], ps[2], ps[0], ps[5]].sorted(), [ps[0], ps[2], ps[3], ps[5]])
-    }
-    func testTimeLineCompaction() {
-        let t = TimeLine(maxSegmentCount: 2, maxPointCountInSegment: 4)
-        var ps = [TimePoint]()
-        for _ in 0..<8 {
-            ps.append(t.append())
-        }
-        ps.removeAll()
-        XCTAssert(t.segments.count == 1)
-        XCTAssert(t.segments[0].pointCount == 0)
-    }
 }

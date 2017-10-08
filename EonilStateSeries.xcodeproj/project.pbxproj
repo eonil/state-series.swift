@@ -10,17 +10,10 @@
 		45188C161F813A7100506284 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
 		45188C201F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C1F1F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift */; };
 		45188C221F813E4100506284 /* libEonilStateSeries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 455267A21F8128BF001D4006 /* libEonilStateSeries.a */; };
-		45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
-		45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */; };
 		45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
 		45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C301F8158AB00506284 /* StateSeriesType.swift */; };
-		45188C6A1F82085100506284 /* assertMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C691F82085100506284 /* assertMainThread.swift */; };
-		45188C6C1F82085500506284 /* assertMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C691F82085100506284 /* assertMainThread.swift */; };
-		45188C6E1F820FE800506284 /* StateSeriesWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */; };
-		45188C721F8227E600506284 /* TimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C711F8227E600506284 /* TimePoint.swift */; };
 		455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455267AE1F8128E1001D4006 /* StateSeries.swift */; };
-		45B5E6A41F8248150021C3C0 /* StateSeriesWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */; };
-		45B5E6A51F8248150021C3C0 /* TimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45188C711F8227E600506284 /* TimePoint.swift */; };
+		45C07F581F8A45770091D7D1 /* libEonilTimePoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C07F4E1F8A451B0091D7D1 /* libEonilTimePoint.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +23,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 455267A11F8128BF001D4006;
 			remoteInfo = "EonilStateSeries-macOS";
+		};
+		45C07F4D1F8A451B0091D7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45C07F031F8A35720091D7D1;
+			remoteInfo = "EonilTimePoint-macOS";
+		};
+		45C07F4F1F8A451B0091D7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45C07F111F8A35900091D7D1;
+			remoteInfo = "EonilTimePoint-iOS";
+		};
+		45C07F511F8A451B0091D7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45C07F281F8A36DE0091D7D1;
+			remoteInfo = "EonilTimePoint-macOS-Tests";
+		};
+		45C07F531F8A45300091D7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C07F021F8A35720091D7D1;
+			remoteInfo = "EonilTimePoint-macOS";
+		};
+		45C07F551F8A45340091D7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C07F101F8A35900091D7D1;
+			remoteInfo = "EonilTimePoint-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,15 +78,12 @@
 		45188C1D1F813E4100506284 /* EonilStateSeries-macOS-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EonilStateSeries-macOS-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45188C1F1F813E4100506284 /* EonilStateSeries_macOS_UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EonilStateSeries_macOS_UnitTests.swift; sourceTree = "<group>"; };
 		45188C211F813E4100506284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIdentifier.extension.swift; sourceTree = "<group>"; };
 		45188C2B1F814F4C00506284 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45188C2C1F814F5500506284 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		45188C301F8158AB00506284 /* StateSeriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeriesType.swift; sourceTree = "<group>"; };
-		45188C691F82085100506284 /* assertMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assertMainThread.swift; sourceTree = "<group>"; };
-		45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeriesWatchdog.swift; sourceTree = "<group>"; };
-		45188C711F8227E600506284 /* TimePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePoint.swift; sourceTree = "<group>"; };
 		455267A21F8128BF001D4006 /* libEonilStateSeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilStateSeries.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		455267AE1F8128E1001D4006 /* StateSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSeries.swift; sourceTree = "<group>"; };
+		45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EonilTimePoint.xcodeproj; path = ../timepoint.swift/EonilTimePoint.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C07F581F8A45770091D7D1 /* libEonilTimePoint.a in Frameworks */,
 				45188C221F813E4100506284 /* libEonilStateSeries.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,9 +127,11 @@
 			children = (
 				45188C2B1F814F4C00506284 /* README.md */,
 				45188C2C1F814F5500506284 /* LICENSE.md */,
+				45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */,
 				455267AC1F8128D0001D4006 /* Sources */,
 				45188C1E1F813E4100506284 /* EonilStateSeries-macOS-UnitTests */,
 				455267A31F8128BF001D4006 /* Products */,
+				45C07F571F8A45770091D7D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,12 +150,25 @@
 			children = (
 				45188C301F8158AB00506284 /* StateSeriesType.swift */,
 				455267AE1F8128E1001D4006 /* StateSeries.swift */,
-				45188C6D1F820FE800506284 /* StateSeriesWatchdog.swift */,
-				45188C281F814C3F00506284 /* ObjectIdentifier.extension.swift */,
-				45188C711F8227E600506284 /* TimePoint.swift */,
-				45188C691F82085100506284 /* assertMainThread.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		45C07F481F8A451B0091D7D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45C07F4E1F8A451B0091D7D1 /* libEonilTimePoint.a */,
+				45C07F501F8A451B0091D7D1 /* libEonilTimePoint.a */,
+				45C07F521F8A451B0091D7D1 /* EonilTimePoint-macOS-Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45C07F571F8A45770091D7D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +195,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				45C07F561F8A45340091D7D1 /* PBXTargetDependency */,
 			);
 			name = "EonilStateSeries-iOS";
 			productName = "EonilStateSeries-iOS";
@@ -189,6 +231,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				45C07F541F8A45300091D7D1 /* PBXTargetDependency */,
 			);
 			name = "EonilStateSeries-macOS";
 			productName = "EonilStateSeries-macOS";
@@ -229,6 +272,12 @@
 			mainGroup = 455267971F812898001D4006;
 			productRefGroup = 455267A31F8128BF001D4006 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 45C07F481F8A451B0091D7D1 /* Products */;
+					ProjectRef = 45C07F471F8A451B0091D7D1 /* EonilTimePoint.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				455267A11F8128BF001D4006 /* EonilStateSeries-macOS */,
@@ -237,6 +286,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		45C07F4E1F8A451B0091D7D1 /* libEonilTimePoint.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEonilTimePoint.a;
+			remoteRef = 45C07F4D1F8A451B0091D7D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45C07F501F8A451B0091D7D1 /* libEonilTimePoint.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEonilTimePoint.a;
+			remoteRef = 45C07F4F1F8A451B0091D7D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45C07F521F8A451B0091D7D1 /* EonilTimePoint-macOS-Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "EonilTimePoint-macOS-Tests.xctest";
+			remoteRef = 45C07F511F8A451B0091D7D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		45188C1B1F813E4100506284 /* Resources */ = {
@@ -254,11 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45188C161F813A7100506284 /* StateSeries.swift in Sources */,
-				45188C6C1F82085500506284 /* assertMainThread.swift in Sources */,
 				45188C321F8158AB00506284 /* StateSeriesType.swift in Sources */,
-				45B5E6A41F8248150021C3C0 /* StateSeriesWatchdog.swift in Sources */,
-				45188C2A1F814C4200506284 /* ObjectIdentifier.extension.swift in Sources */,
-				45B5E6A51F8248150021C3C0 /* TimePoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45188C721F8227E600506284 /* TimePoint.swift in Sources */,
 				455267AF1F8128E1001D4006 /* StateSeries.swift in Sources */,
-				45188C6E1F820FE800506284 /* StateSeriesWatchdog.swift in Sources */,
-				45188C6A1F82085100506284 /* assertMainThread.swift in Sources */,
 				45188C311F8158AB00506284 /* StateSeriesType.swift in Sources */,
-				45188C291F814C3F00506284 /* ObjectIdentifier.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +355,16 @@
 			isa = PBXTargetDependency;
 			target = 455267A11F8128BF001D4006 /* EonilStateSeries-macOS */;
 			targetProxy = 45188C231F813E4100506284 /* PBXContainerItemProxy */;
+		};
+		45C07F541F8A45300091D7D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EonilTimePoint-macOS";
+			targetProxy = 45C07F531F8A45300091D7D1 /* PBXContainerItemProxy */;
+		};
+		45C07F561F8A45340091D7D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EonilTimePoint-iOS";
+			targetProxy = 45C07F551F8A45340091D7D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

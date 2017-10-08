@@ -6,6 +6,8 @@
 //
 //
 
+import EonilTimePoint
+
 ///
 /// A series of states.
 ///
@@ -60,8 +62,15 @@ public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertib
     }
 }
 public extension StateSeries {
+    ///
+    /// Strongly typed point ID for collection's element type.
+    ///
+    /// Basically, you can compare equality or ordering only with same typed
+    /// point IDs. But that's just a safety-net, and you can escape from it
+    /// be using `timePoint` property.
+    ///
     public struct PointID: Comparable, Hashable, CustomDebugStringConvertible {
-        let timePoint: TimePoint
+        public let timePoint: TimePoint
         fileprivate init(_ p: TimePoint) {
             timePoint = p
         }
@@ -100,3 +109,11 @@ extension StateSeries: ExpressibleByArrayLiteral {
         append(contentsOf: elements)
     }
 }
+
+
+
+
+
+
+
+
