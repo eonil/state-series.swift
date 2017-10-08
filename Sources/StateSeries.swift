@@ -60,10 +60,13 @@ public struct StateSeries<Snapshot>: StateSeriesType, CustomDebugStringConvertib
     }
 }
 public extension StateSeries {
-    public struct PointID: Comparable, CustomDebugStringConvertible {
+    public struct PointID: Comparable, Hashable, CustomDebugStringConvertible {
         let timePoint: TimePoint
         fileprivate init(_ p: TimePoint) {
             timePoint = p
+        }
+        public var hashValue: Int {
+            return timePoint.hashValue
         }
         public static func == (_ a: PointID, _ b: PointID) -> Bool {
             return a.timePoint == b.timePoint
