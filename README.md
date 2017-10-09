@@ -1,3 +1,5 @@
+**DEPRECATED! REPLACED BY ANOTHER IMPLEMENTATION: https://github.com/eonil/series.swift DON'T USE THIS ANYMORE.**
+
 EonilStateSeries
 ============
 Hoon H.
